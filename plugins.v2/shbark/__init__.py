@@ -16,7 +16,7 @@ class ShBark(_PluginBase):
     # 插件图标
     plugin_icon = ""
     # 插件版本
-    plugin_version = "1.1"
+    plugin_version = "1.2"
     # 插件作者
     plugin_author = "SunHang"
     # 作者主页
@@ -313,6 +313,9 @@ class ShBark(_PluginBase):
         if (msg_type and self._msgtypes
                 and msg_type.name not in self._msgtypes):
             logger.info(f"消息类型 {msg_type.value} 未开启消息发送")
+            return
+        
+        if not username:
             return
         
         logger.info(f"给用户：{username} 发送消息，{title}")
