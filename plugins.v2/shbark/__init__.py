@@ -16,7 +16,7 @@ class ShBark(_PluginBase):
     # 插件图标
     plugin_icon = ""
     # 插件版本
-    plugin_version = "1.0"
+    plugin_version = "1.1"
     # 插件作者
     plugin_author = "SunHang"
     # 作者主页
@@ -293,9 +293,10 @@ class ShBark(_PluginBase):
 
         msg_body = event.event_data
         # 渠道
-        channel = msg_body.get("channel")
-        if channel:
-            return
+        # channel = msg_body.get("channel")
+        # if channel:
+        #     return
+
         # 类型
         msg_type: NotificationType = msg_body.get("type")
         # 标题
